@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "kbbbc_20211227"
