@@ -4,6 +4,7 @@ import adapters.ViewPagerAdapter
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_home.*
 import kr.co.haun.kbbbc_20211227.R
+import kotlin.math.log
 
 
 class HomeFragment: Fragment() {
@@ -20,7 +22,7 @@ class HomeFragment: Fragment() {
     private val MIN_SCALE = 0.85f // 뷰가 몇퍼센트로 줄어들 것인지
     private val MIN_ALPHA = 0.5f // 어두워지는 정도를 나타낸 듯 하다.
 
-    var currentPosition=0
+    var currentPosition = 0
 
     //핸들러 설정
     //ui 변경하기
@@ -58,9 +60,10 @@ class HomeFragment: Fragment() {
 
     //페이지 변경하기
     fun setPage(){
-        if(currentPosition == 3) currentPosition=0
+        if(currentPosition == 3) currentPosition = 0
         banner.setCurrentItem(currentPosition,true)
-        currentPosition+=1
+        Log.d("current Position : ", "::" + currentPosition)
+        currentPosition += 1
     }
 
     //3초 마다 페이지 넘기기

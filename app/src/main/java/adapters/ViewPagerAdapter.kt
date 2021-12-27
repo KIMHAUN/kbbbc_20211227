@@ -2,14 +2,8 @@ package adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import fragments.HomeFragment
-import fragments.WorshipFragment
 import kotlinx.android.synthetic.main.banner_list_item.view.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import kr.co.haun.kbbbc_20211227.R
 
 
