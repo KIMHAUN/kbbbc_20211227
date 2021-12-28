@@ -11,8 +11,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.fragment_home.*
-import kr.co.haun.kbbbc_20211227.GreetingActivity
-import kr.co.haun.kbbbc_20211227.R
+import kr.co.haun.kbbbc_20211227.*
 
 class HomeFragment: Fragment() {
 
@@ -23,7 +22,6 @@ class HomeFragment: Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.fragment_home)
     }
 
     override fun onCreateView(
@@ -47,9 +45,55 @@ class HomeFragment: Fragment() {
         spring_dots_indicator.setViewPager2(banner) //indicator 설정
 
         //Intent setting
+        intentSetting()
+
+    }
+
+    // 뷰 페이저에 들어갈 아이템
+    private fun getBannerList(): ArrayList<Int> {
+        return arrayListOf<Int>(R.drawable.banner_1, R.drawable.banner_2, R.drawable.banner_3)
+    }
+
+    // 뷰 페이저에 들어갈 아이템
+    private fun intentSetting() {
+        //인사말
         greetings.setOnClickListener{
             val  myIntent = Intent(context, GreetingActivity::class.java)
-            myIntent.putExtra("title", "인사말")
+            startActivity(myIntent)
+        }
+        //연혁
+        history.setOnClickListener{
+            val  myIntent = Intent(context, HistoryActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        //비전
+        vision.setOnClickListener{
+            val  myIntent = Intent(context, VisionActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        //신앙의 믿음
+        faith.setOnClickListener{
+            val  myIntent = Intent(context, FaithActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        //사역자
+        profiles.setOnClickListener{
+            val  myIntent = Intent(context, ProfilesActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        //예배 안내
+        timetable.setOnClickListener{
+            val  myIntent = Intent(context, TimetableActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        //찾아오는 길
+        map.setOnClickListener{
+            val  myIntent = Intent(context, MapActivity::class.java)
             startActivity(myIntent)
         }
     }
@@ -79,10 +123,7 @@ class HomeFragment: Fragment() {
         }
     }*/
 
-    // 뷰 페이저에 들어갈 아이템
-    private fun getBannerList(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.banner_1, R.drawable.banner_2, R.drawable.banner_3)
-    }
+
 
     /* 공식문서에 있는 코드 긁어온거임 */
     /*inner class ZoomOutPageTransformer : ViewPager2.PageTransformer {

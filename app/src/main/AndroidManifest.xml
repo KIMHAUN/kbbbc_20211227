@@ -19,6 +19,12 @@
         </activity>
 
         <activity android:name=".GreetingActivity"/>
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".VisionActivity"/>
+        <activity android:name=".FaithActivity"/>
+        <activity android:name=".ProfilesActivity"/>
+        <activity android:name=".TimetableActivity"/>
+        <activity android:name=".MapActivity"/>
     </application>
 
 </manifest>
