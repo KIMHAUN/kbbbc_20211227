@@ -21,8 +21,6 @@ class HomeFragment: Fragment() {
 
     var currentPosition = 0
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.fragment_home)
@@ -51,6 +49,7 @@ class HomeFragment: Fragment() {
         //Intent setting
         greetings.setOnClickListener{
             val  myIntent = Intent(context, GreetingActivity::class.java)
+            myIntent.putExtra("title", "인사말")
             startActivity(myIntent)
         }
     }
