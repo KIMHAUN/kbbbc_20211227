@@ -25,12 +25,5 @@ class MainActivity : BaseActivity() {
         myViewPager.adapter = mvpa
         kbbbcTabLayout.setupWithViewPager(myViewPager)
 
-        //vp_slider = findViewById(R.id.viewPager_banner)
-
-
-
-
     }
-
-
 }

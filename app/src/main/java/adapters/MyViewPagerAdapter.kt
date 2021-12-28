@@ -12,7 +12,8 @@ class MyViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
         return when(position){
             0 -> "홈"
             1 -> "말씀과 찬양"
-            else -> "공지사항"
+            2 -> "공지사항"
+            else -> ""
         }
     }
 
@@ -24,7 +25,8 @@ class MyViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
         return when(position) {
             0 -> HomeFragment()
             1 -> WorshipFragment()
-            else -> NoticeFragment()
+            2 -> NoticeFragment()
+            else -> HomeFragment()
         }
     }
 }

@@ -1,21 +1,18 @@
 package fragments
 
 import adapters.ViewPagerAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_home.*
+import kr.co.haun.kbbbc_20211227.GreetingActivity
 import kr.co.haun.kbbbc_20211227.R
-import kotlin.math.log
-
 
 class HomeFragment: Fragment() {
 
@@ -24,12 +21,7 @@ class HomeFragment: Fragment() {
 
     var currentPosition = 0
 
-    //핸들러 설정
-    //ui 변경하기
-    val handler= Handler(Looper.getMainLooper()){
-        setPage()
-        true
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,30 +43,42 @@ class HomeFragment: Fragment() {
         banner.orientation = ViewPager2.ORIENTATION_HORIZONTAL // 방향을 가로로
 
         //뷰페이저 넘기는 쓰레드
-        val thread=Thread(PagerRunnable())
-        thread.start()
+        //val thread=Thread(PagerRunnable())
+        //thread.start()
         
         spring_dots_indicator.setViewPager2(banner) //indicator 설정
 
+        //Intent setting
+        greetings.setOnClickListener{
+            val  myIntent = Intent(context, GreetingActivity::class.java)
+            startActivity(myIntent)
+        }
     }
+
+    //핸들러 설정
+    //ui 변경하기
+    /*val handler= Handler(Looper.getMainLooper()){
+        setPage()
+        true
+    }*/
 
     //페이지 변경하기
-    fun setPage(){
+    /*fun setPage(){
         if(currentPosition == 3) currentPosition = 0
         banner.setCurrentItem(currentPosition,true)
-        Log.d("current Position : ", "::" + currentPosition)
+        //Log.d("current Position : ", "::" + currentPosition)
         currentPosition += 1
-    }
+    }*/
 
     //3초 마다 페이지 넘기기
-    inner class PagerRunnable:Runnable{
+    /*inner class PagerRunnable:Runnable{
         override fun run() {
             while(true){
                 Thread.sleep(2500)
                 handler.sendEmptyMessage(0)
             }
         }
-    }
+    }*/
 
     // 뷰 페이저에 들어갈 아이템
     private fun getBannerList(): ArrayList<Int> {
@@ -82,7 +86,7 @@ class HomeFragment: Fragment() {
     }
 
     /* 공식문서에 있는 코드 긁어온거임 */
-    inner class ZoomOutPageTransformer : ViewPager2.PageTransformer {
+    /*inner class ZoomOutPageTransformer : ViewPager2.PageTransformer {
         override fun transformPage(view: View, position: Float) {
             view.apply {
                 val pageWidth = width
@@ -118,5 +122,5 @@ class HomeFragment: Fragment() {
                 }
             }
         }
-    }
+    }*/
 }
