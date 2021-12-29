@@ -2,6 +2,7 @@ package kr.co.haun.kbbbc_20211227
 
 import adapters.MyViewPagerAdapter
 import android.os.Bundle
+import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

@@ -18,7 +18,7 @@ import kr.co.haun.kbbbc_20211227.*
 class HomeFragment: Fragment() {
 
     private var currentPosition = Int.MAX_VALUE / 2
-    private val intervalTime = 1500.toLong() // 몇초 간격으로 페이지를 넘길것인지 (1500 = 1.5초)
+    private val intervalTime = 2000.toLong() // 몇초 간격으로 페이지를 넘길것인지 (1500 = 1.5초)
     private var myHandler = MyHandler()
 
     override fun onCreate(savedInstanceState: Bundle?) {

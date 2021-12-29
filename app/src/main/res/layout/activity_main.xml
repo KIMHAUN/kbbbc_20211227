@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
+        app:tabMode="fixed"
         android:id="@+id/kbbbcTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <androidx.viewpager.widget.ViewPager
+    <adapters.SwipeLockableViewPager
         android:id="@+id/myViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
