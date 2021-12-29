@@ -4,8 +4,8 @@ import adapters.ViewPagerAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.os.Message
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -101,7 +101,6 @@ class HomeFragment: Fragment() {
         return arrayListOf<Int>(R.drawable.banner_1, R.drawable.banner_2, R.drawable.banner_3)
     }
 
-    // 뷰 페이저에 들어갈 아이템
     private fun intentSetting() {
         //인사말
         greetings.setOnClickListener{
@@ -146,6 +145,8 @@ class HomeFragment: Fragment() {
 
         //heart
         heart.setOnClickListener {
+
+            Log.d("heart click : ", ":: clicked!!!" )
             Toast.makeText(context, "JESUS LOVES YOU", Toast.LENGTH_SHORT).show()
         }
     }

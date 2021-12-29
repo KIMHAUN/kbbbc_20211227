@@ -25,6 +25,7 @@
         <activity android:name=".ProfilesActivity"/>
         <activity android:name=".TimetableActivity"/>
         <activity android:name=".MapActivity"/>
+        <activity android:name=".MannaActivity"/>
     </application>
 
 </manifest>
