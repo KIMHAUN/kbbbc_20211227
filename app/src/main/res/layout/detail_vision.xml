@@ -20,13 +20,13 @@
     </androidx.appcompat.widget.Toolbar>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:scaleType="fitStart"
             android:src="@drawable/vision"
-            android:textSize="40dp" />
+            />
     </ScrollView>
-
 </LinearLayout>

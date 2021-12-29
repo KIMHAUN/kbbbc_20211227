@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
 
-    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+    <!--<com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
         android:id="@+id/spring_dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,9 +21,10 @@
         app:dotsStrokeWidth="1dp"
         app:stiffness="300"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"/>-->
 
     <GridLayout
+        android:layout_marginTop="20dp"
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -242,7 +243,7 @@
 
     </GridLayout>
     <LinearLayout
-        android:layout_height="80dp"
+        android:layout_height="75dp"
         android:layout_width="0dp"
         android:layout_weight="1">
 

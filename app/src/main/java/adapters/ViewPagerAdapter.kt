@@ -12,15 +12,15 @@ class ViewPagerAdapter(bannerList: ArrayList<Int>) : RecyclerView.Adapter<ViewPa
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = PagerViewHolder((parent))
 
-    override fun getItemCount(): Int = item.size
+    override fun getItemCount(): Int = Int.MAX_VALUE
 
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
-        holder.idol.setImageResource(item[position])
+        holder.banner.setImageResource(item[position%3])
     }
 
     inner class PagerViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder
     (LayoutInflater.from(parent.context).inflate(R.layout.banner_list_item, parent, false)) {
 
-        val idol = itemView.img_slide_image!!
+        val banner = itemView.img_slide_image!!
     }
 }
