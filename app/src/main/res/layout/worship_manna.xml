@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:paddingRight="40dp"
             android:layout_height="50dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/manna_banner"/>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

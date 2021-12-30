@@ -43,8 +43,11 @@
 
             <ImageView
                 app:srcCompat="@drawable/manna"
-                android:layout_height="50dp"
-                android:layout_width="50dp"/>
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
 
             <TextView
                 android:layout_width="80dp"
@@ -66,8 +69,9 @@
             android:orientation="vertical">
 
             <ImageView
-                app:srcCompat="@drawable/dove"
+                app:srcCompat="@drawable/bible"
                 android:layout_height="50dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="50dp"/>
             <TextView
                 android:text="주일 예배"
