@@ -26,6 +26,11 @@
         <activity android:name=".TimetableActivity"/>
         <activity android:name=".MapActivity"/>
         <activity android:name=".MannaActivity"/>
+        <activity android:name=".SundayActivity"/>
+        <activity android:name=".WednesdayActivity"/>
+        <activity android:name=".YouthActivity"/>
+        <activity android:name=".MidhighActivity"/>
+        <activity android:name=".ChildrenActivity"/>
     </application>
 
 </manifest>
