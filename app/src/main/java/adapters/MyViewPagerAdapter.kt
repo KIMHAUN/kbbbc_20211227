@@ -12,7 +12,7 @@ class MyViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
         return when(position){
             0 -> "홈"
             1 -> "말씀과 찬양"
-            else -> "공지사항"
+            else -> "큰빛공지"
         }
     }
 
