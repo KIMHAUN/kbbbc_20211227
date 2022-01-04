@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_children.xml" value="0.1515625" />
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_manna.xml" value="0.1515625" />
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_midhigh.xml" value="0.1515625" />
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_sunday.xml" value="0.1515625" />
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_wednesday.xml" value="0.1515625" />
+        <entry key="..\:/Users/ntels/IdeaProjects/kbbbc_20211227/app/src/main/res/layout/worship_youth.xml" value="0.1515625" />
         <entry key="..\:/Users/wha02/StudioProjects/kbbbc_20211227/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/wha02/StudioProjects/kbbbc_20211227/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/wha02/StudioProjects/kbbbc_20211227/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
@@ -27,6 +33,9 @@
         <entry key="..\:/Users/wha02/StudioProjects/kbbbc_20211227/app/src/main/res/layout/worship_youth.xml" value="0.25364583333333335" />
       </map>
     </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
