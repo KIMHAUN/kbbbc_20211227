@@ -22,7 +22,7 @@
 
         android:layout_marginTop="50dp"
         android:padding="20dp"
-        android:layout_gravity="fill"
+        android:layout_gravity = "fill"
         android:layout_columnWeight="3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,11 +34,11 @@
         <!--오늘의 말씀과 찬양-->
         <LinearLayout
             android:id="@+id/manna"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:clickable="true"
-            android:layout_marginLeft="20dp"
             android:orientation="vertical">
             <ImageView
                 app:srcCompat="@drawable/manna"
@@ -60,10 +60,10 @@
         <!--주일 예배-->
         <LinearLayout
             android:id="@+id/sunday"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
+
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical">
@@ -85,9 +85,9 @@
         <!--수요예배-->
         <LinearLayout
             android:id="@+id/wednesday"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical">
@@ -111,10 +111,9 @@
         <LinearLayout
             android:layout_marginTop="30dp"
             android:id="@+id/youth"
-            android:layout_width="80dp"
-            android:layout_marginLeft="20dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical">
@@ -138,10 +137,9 @@
         <LinearLayout
             android:layout_marginTop="30dp"
             android:id="@+id/midhigh"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical">
@@ -165,12 +163,11 @@
         <LinearLayout
             android:layout_marginTop="30dp"
             android:id="@+id/children"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:clickable="true"
-            android:layout_marginLeft="30dp"
             android:orientation="vertical">
 
             <ImageView
@@ -187,8 +184,6 @@
                 android:layout_height="30dp"
                 android:layout_width="80dp"/>
         </LinearLayout>
-
-
 
     </GridLayout>
     <LinearLayout
@@ -211,6 +206,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="bottom"
+            android:layout_weight="1"
             android:layout_gravity="bottom"
             android:padding="8dp"
             android:textColor="@color/white"
