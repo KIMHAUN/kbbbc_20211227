@@ -27,7 +27,7 @@ class WorshipAdapter (private val context: Context) : RecyclerView.Adapter<Worsh
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val worshipThumbnail: ImageView = itemView.findViewById(R.id.worshipThumbnail)
+        private val worshipImg: ImageView = itemView.findViewById(R.id.worshipImg)
         private val worshipTitle: TextView = itemView.findViewById(R.id.worshipTitle)
         private val worshipSubtitle: TextView = itemView.findViewById(R.id.worshipSubtitle)
         private val worshipDate: TextView = itemView.findViewById(R.id.worshipDate)
@@ -36,7 +36,7 @@ class WorshipAdapter (private val context: Context) : RecyclerView.Adapter<Worsh
             worshipTitle.text = item.worshipTitle
             worshipSubtitle.text = item.worshipSubtitle
             worshipDate.text = item.worshipDate.toString()
-            Glide.with(itemView).load(item.worshipThumbnail).into(worshipThumbnail)
+            Glide.with(itemView).load(item.worshipImg).into(worshipImg)
 
         }
     }

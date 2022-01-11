@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <ImageView
-        android:id="@+id/worshipThumbnail"
+        android:id="@+id/worshipImg"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_margin="10dp"
@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/worshipThumbnail"
-        app:layout_constraintTop_toTopOf="@id/worshipThumbnail"
+        app:layout_constraintStart_toEndOf="@id/worshipImg"
+        app:layout_constraintTop_toTopOf="@id/worshipImg"
         android:text="복음과 신앙을 변호하는 성도"
         android:layout_marginLeft="20dp" />
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/worshipThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/worshipImg"
         app:layout_constraintStart_toStartOf="@id/worshipTitle"
         android:text="20211230"/>
 
