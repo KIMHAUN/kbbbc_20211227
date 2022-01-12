@@ -1,11 +1,14 @@
 package kr.co.haun.kbbbc_20211227.utils
 
-import android.content.Context
 import android.util.Log
 import okhttp3.*
-import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONArray
+import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
+
 
 class ServerUtil {
 
@@ -13,7 +16,7 @@ class ServerUtil {
 //    행동 지침을 담아주기 위한 인터페이스 (가이드북/매뉴얼) 정의
 
     interface JsonResponseHandler {
-        fun onResponse(json : JSONObject)
+        fun onResponse(json : JSONArray)
     }
 
     companion object {
@@ -28,7 +31,7 @@ class ServerUtil {
 
 //            로그인 주소 : http://15.164.153.174/user
 //            Intent(mContext, 목적지) => 목적지 대응 : 기능 주소
-            val urlString = "${HOST_URL}/user"
+            val urlString = "${HOST_URL}"
 
 //            putExtra("이름표", 실제값) => 폼데이터.add("서버요구이름표", 실제첨부값)
             val formData = FormBody.Builder()
@@ -38,9 +41,20 @@ class ServerUtil {
 //            요청의 모든 정보를 담고있는 Request를 생성하자.
 //            Intent 덩어리에 대응되는 개념.
 
+// create your json here
+            // create your json here
+            val jsonObject = JSONObject()
+            try {
+                jsonObject.put("worship_type", worship_type)
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+
+            val mediaType = "application/json; charset=utf-8".toMediaType()
+            val body = jsonObject.toString().toRequestBody(mediaType)
             val request = Request.Builder()
                 .url(urlString)
-                .post(formData)
+                .post(body)
 //                .header() // API가 header 데이터를 요구하면 담아주는 곳
                 .build()
 
@@ -61,7 +75,10 @@ class ServerUtil {
                     val bodyString = response.body!!.string()
 
 //                    받아낸 String을 => 분석하기 용이한 JSONObject로 변환.
-                    val jsonObj = JSONObject(bodyString)
+                    //val jsonObj = JSONObject(bodyString)
+//                    받아낸 String을 => 분석하기 용이한 JSONArray로 변환.
+                    val jsonObj = JSONArray(bodyString)
+
 
                     Log.d("서버응답본문", jsonObj.toString())
 
@@ -71,12 +88,7 @@ class ServerUtil {
                     handler?.onResponse(jsonObj)
 
                 }
-
             })
-
         }
     }
-
-
-
 }
