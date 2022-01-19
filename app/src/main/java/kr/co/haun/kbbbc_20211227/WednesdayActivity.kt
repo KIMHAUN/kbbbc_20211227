@@ -32,13 +32,13 @@ class WednesdayActivity : BaseActivity() {
     }
 
     private fun initRecycler() {
-        worshipAdapter = WorshipAdapter(this)
+        //worshipAdapter = WorshipAdapter(this)
         mannaRecyclerView.adapter = worshipAdapter
 
 
         datas.apply {
 
-            worshipAdapter.datas = datas
+            worshipAdapter.worshipList = datas
             worshipAdapter.notifyDataSetChanged()
 
         }

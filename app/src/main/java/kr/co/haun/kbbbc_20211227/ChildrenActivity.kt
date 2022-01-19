@@ -32,7 +32,7 @@ class ChildrenActivity : BaseActivity() {
     }
 
     private fun initRecycler() {
-        worshipAdapter = WorshipAdapter(this)
+        //worshipAdapter = WorshipAdapter(this)
         mannaRecyclerView.adapter = worshipAdapter
 
 
@@ -52,7 +52,7 @@ class ChildrenActivity : BaseActivity() {
 //            add(WorshipData(worshipThumbnail = R.drawable.manna_211219, worshipTitle = "예수님의 이름", worshipDate = "20211230"))
 //            add(WorshipData(worshipThumbnail = R.drawable.manna_211219, worshipTitle = "예수님의 이름", worshipDate = "20211230"))
 
-            worshipAdapter.datas = datas
+            worshipAdapter.worshipList = datas
             worshipAdapter.notifyDataSetChanged()
 
         }

@@ -1,5 +1,6 @@
 package kr.co.haun.kbbbc_20211227.utils
 
+import android.os.AsyncTask
 import android.util.Log
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
@@ -76,7 +77,6 @@ class ServerUtil {
 
 //                    받아낸 String을 => 분석하기 용이한 JSONObject로 변환.
                     //val jsonObj = JSONObject(bodyString)
-//                    받아낸 String을 => 분석하기 용이한 JSONArray로 변환.
                     val jsonObj = JSONArray(bodyString)
 
 
@@ -84,7 +84,6 @@ class ServerUtil {
 
 //                    어떤 서버응답 처리를 해줄지 가이드북 (인터페이스)가 존재한다면,
 //                    그 가이드북에 적힌 내용을 실제로 실행해달라는 코드.
-
                     handler?.onResponse(jsonObj)
 
                 }
