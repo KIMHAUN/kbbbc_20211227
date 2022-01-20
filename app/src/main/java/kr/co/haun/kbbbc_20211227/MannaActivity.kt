@@ -1,15 +1,16 @@
 package kr.co.haun.kbbbc_20211227
 
 import adapters.WorshipAdapter
-import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import data.WorshipData
 import kotlinx.android.synthetic.main.detail_greetings.toolbar
 import kotlinx.android.synthetic.main.worship_manna.*
 import kr.co.haun.kbbbc_20211227.utils.ServerUtil
 import org.json.JSONArray
-import org.json.JSONObject
+
 
 class MannaActivity : BaseActivity() {
 
@@ -63,14 +64,17 @@ class MannaActivity : BaseActivity() {
                     //Log.d("json to worshipData", wd.toString())
                     datas.add(wd)
                 }
+                Log.d("worship from server ::", datas.toString())
+                Handler(Looper.getMainLooper()).post(Runnable { worshipAdapter.notifyDataSetChanged() })
+                //worshipAdapter.setItems(datas)
             }
         })
-        Log.d("worship from server ::", datas.toString())
+
         return datas
     }
 
     private fun initRecycler() {
-        worshipAdapter = WorshipAdapter(this, getWorshipList())
+        worshipAdapter = WorshipAdapter(this)
         mannaRecyclerView.adapter = worshipAdapter
 
         datas = getWorshipList()
@@ -79,6 +83,7 @@ class MannaActivity : BaseActivity() {
             worshipAdapter.worshipList = datas
             worshipAdapter.notifyDataSetChanged()
         }
+
 
         //datas.apply {
 //            for (i in 0 until datas.size) {

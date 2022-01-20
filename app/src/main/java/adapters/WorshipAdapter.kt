@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import data.WorshipData
 import kr.co.haun.kbbbc_20211227.R
 
-class WorshipAdapter (private val context: Context, worshipList: List<WorshipData>) : RecyclerView.Adapter<WorshipAdapter.ViewHolder>() {
+class WorshipAdapter (private val context: Context) : RecyclerView.Adapter<WorshipAdapter.ViewHolder>() {
 
     var worshipList = mutableListOf<WorshipData>()
 
@@ -24,6 +24,11 @@ class WorshipAdapter (private val context: Context, worshipList: List<WorshipDat
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(worshipList[position])
+    }
+
+    fun setItems(newItem: List<WorshipData>) {
+        this.worshipList.addAll(newItem)
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
